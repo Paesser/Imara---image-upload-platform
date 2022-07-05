@@ -1,0 +1,34 @@
+
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0,  user-scalable = no, minimum-scale=1.0, maximum-scale=1.0">
+<link rel="stylesheet" href="style.css">
+<body>
+
+<div class="cardFormelmnts">
+<div class="cardForm">
+	<p>you need an account to upload photos</p>
+	<h3>Sign Up</h3>
+<input type="text" placeholder="User Name" id="uName"/>
+<input type="text" placeholder="bio (50 characters)" id="description" maxlength="50">
+<input type="text" placeholder="social media links" id="social">
+
+<br>
+<input type="email" placeholder="email" id="email"/>
+<input type="password" placeholder="enter password" id="password"/>
+	<p id="instr"></p>
+<input type="button" onclick="signUp()" value="Sign up"/>
+</div>
+	</div>
+
+<!--firebase stuff-->
+<script src="https://gstatic.com/firebasejs/8.9.1/firebase-app.js"></script>
+<script src="https://gstatic.com/firebasejs/8.9.1/firebase-auth.js"></script>
+<script src="https://gstatic.com/firebasejs/8.9.1/firebase-database.js"></script>
+<script src="config.js"></script>
+
+<!--my script-->
+
+<script src="home.js"></script>
+
+
+

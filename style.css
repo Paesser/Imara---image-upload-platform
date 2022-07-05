@@ -1,0 +1,371 @@
+@font-face {
+  font-family: imara;
+  src: url(imara.TTF);
+}
+
+body{
+	display: flex;
+    align-items: center;
+    justify-content: center;
+	background-color: #1E2248;
+	font-family: sans-serif;
+	background-repeat: no-repeat;
+	background-size: cover;
+	
+	overflow: hidden;
+	transition-property: all;
+	transition-duration: 5s;
+
+	
+	
+
+}
+
+.card{
+	
+	display: flex;
+	align-items: center;
+    justify-content: center;
+	flex-direction: column;
+	gap: 10px;
+	width: 50vw;
+	padding: 10px;
+	border-radius: 3px;
+	background-color: #1E2248;
+	
+  
+	
+	
+
+
+	
+	
+}
+
+input[type="button"]{
+
+	
+	padding: 10px;
+
+	border-style: none;
+	background-color: #0000;
+	color: white;
+	font-weight: bold;
+	
+
+	
+	
+}
+input[type="button"]:hover{
+	cursor: pointer;
+	background-color: #00000000;
+	box-shadow: 0px 2px 5px black;
+	
+
+}
+
+input[type="text"]:active{
+	outline: none;
+	
+
+}
+input[type="text"],[type="email"],input[type="password"]{
+
+	width: 100%;
+	box-shadow:inset 0px 3px 5px #aae;
+	padding: 10px;
+	border-radius: 3px;
+	border-style: none;
+	text-align: center;
+	color: gray;
+	font-weight: bold;
+	z-index: 7;
+	
+	
+}
+
+/*
+.buttons{
+	display: flex;
+	flex-direction: column;
+	width: 50%;
+	
+}
+*/
+
+.slide{
+	
+	border-radius: 2px;
+	width: 100vw;
+	height: 80vh;
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center;
+	animation-name: imgMove;
+	animation-duration: 3s;
+	background-color: #1E2248;
+	transition-property: all;
+	transition-duration: 0.5s;
+
+	
+	
+}
+.imm:active{
+	transform: scale3d(3,3,10);
+}
+.imm{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	width: 1000;
+	background-color: #1E2248;
+		transition-property: all;
+	transition-duration: 0.5s;
+}
+
+
+.cardy{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 20px;
+	flex-wrap: nowrap;
+	background-color: #1E2248;
+	
+}
+.nextt{
+	position: absolute;
+	right: 0px;
+	height: 100vh;
+	width: 100px;
+	background-position:bottom;
+	background-repeat: no-repeat;
+	z-index: 10;
+	background-color: #00000022;
+	background-size: 50%;
+}
+
+.prev{
+	position: absolute;
+	left: 0px;
+	height: 100vh;
+	width: 100px;
+	z-index: 10;
+	
+	background-position: top;
+	background-repeat: no-repeat;
+	background-color: #00000022;
+	transform: rotateZ(180deg);
+	background-size: 50%;
+	 
+}
+.prev:hover{
+background-image: url(right.png);
+	 
+}
+.nextt:hover{
+background-image: url(right.png);
+	 
+}
+
+.large{
+	background-image: url(fullscreen.png);
+	background-position: center;
+	background-size: contain;
+	height: 20px;
+	width: 20px;
+	background-color: #00000000;
+	border-radius: 10px;
+	position: inherit;
+	z-index: 10000;
+	bottom: 20px;
+	left: 10%;
+	right: 50%;
+	transition-property: transform height;
+	transition-duration: 1s;
+}
+.large:hover{
+	transform: rotate(35deg);
+	height: 50px;
+	width: 50px;
+	
+}
+
+.card p{
+	position: absolute;
+	bottom: -20px;
+	z-index: 100;
+	font-family: imara;
+}
+
+img{
+	width:  50vh;
+}
+
+/*mobile stuff*/
+
+/*
+ @media screen and (max-width: 600px) {
+ 
+	
+	
+	img{
+		width: 10vw;
+	}
+	.card{
+	
+	display: flex;
+	align-items: center;
+    justify-content: center;
+	flex-direction: column;
+	gap: 10px;
+
+	padding: 10px;
+	border-radius: 3px;
+	background-color: #1E2248;
+	width: 50vw;
+	
+	transform: scale(1.2);	
+}
+	.prev{
+		background-color: #00000000;
+		height: 30px;
+		bottom: 50px;
+	}.nextt{
+		background-color: #0000;
+		height: 30px;
+		bottom: 50px;
+	}
+}*/
+
+#vallue{
+	font-size: 15px;
+	color: #fff5;
+}
+
+
+.studinfo{
+	background-color: #0000;
+	height: 10vh;
+	width: 300px;
+	position: absolute;
+	z-index: 100    ;
+	right: 0;
+	top: 0px;	
+	transition-property: all;
+	transition-duration: 0.3s;
+	background-image: url(info.png);
+	background-size: 20px;
+	display: flex;
+	align-content: center;
+	justify-content: flex-end;
+	align-items: center;
+	flex-direction: column;
+	background-repeat: no-repeat;
+	background-position: bottom;
+	
+	
+}
+.studinfo:hover{
+	box-shadow: 0px 2px 5px black;
+	background-color: #333a;
+	height: 100vh;
+	width: 300px;
+	position: absolute;
+	z-index: 100    ;
+	right: 0;
+	top: 0px;	
+	color: white;
+	background-image: none;
+	
+}
+
+.social{
+	background-color: deeppink;
+	border-style: none;
+	width: 100%;
+	padding: 15px;
+	color: aliceblue;
+	font-size: 20px;
+	font-weight: bold;
+	box-shadow: 0px 2px 5px black;
+	margin-bottom: 240px;
+	
+	
+	
+	
+}
+.social:hover{
+	cursor: pointer;
+	background-color: #673ab7; 
+}
+
+.artiststuff{
+	margin-top: 20px;
+}
+
+@media (max-width:629px) {
+	.promoStuff{
+    display: none;
+  }
+}
+
+.topBar{
+	height: 40px;
+	width: 100vw;
+	position: fixed;
+	background-color: black;
+	
+}
+
+.cardform{
+	display: flex;
+	flex-direction:column;
+	row-gap: 10px;
+	width: 18.5vw;
+	box-shadow: 0px 2px 5px black;
+	padding: 10px;
+	color: white;
+	align-items: center;
+	background-color: #000a;
+	
+	
+}
+
+.cardform [type="button"]{
+	width: 100%;
+	background-color: deeppink;
+}
+
+.cardFormelmnts{
+	background-image: url(Imara%20Poster%20and%20Branding-02.svg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	width: 50vw;
+}
+
+@media only screen and (max-width: 600px){
+ 	.cardform{
+	display: flex;
+	flex-direction:column;
+	row-gap: 10px;
+	width: 86vw;
+	height: 100vh;
+	box-shadow: 0px 2px 5px black;
+	padding: 10px;
+	color: white;
+	align-items: center;
+		justify-content: center;
+	background-color: #000a;
+	
+	
+	
+}
+	.cardFormelmnts{
+	background-image: url(Imara%20Poster%20and%20Branding-02.svg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	width: 90vw;
+}	
+	}

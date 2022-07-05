@@ -1,0 +1,351 @@
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0,  user-scalable = no, minimum-scale=1.0, maximum-scale=1.0">
+
+<style>
+	
+	
+	.imgage{
+		height: 150px;
+		width: 100%;
+		box-shadow: 0px 2px 5px;
+			transition-property: all;
+		transition-duration: 0.5s;
+		
+	}
+
+	
+	.imgage:hover{
+		
+		box-shadow: 0px 5px 20px black;
+		cursor: pointer;
+		transform: scale(1.05);
+		border-radius: 10px;
+		
+	
+	}
+	body{
+		position: absolute;
+		top: 0px;
+		left: 0px;
+		padding: 20px;
+		background: #1E2248;
+		display: flex;
+		justify-content: center;
+		align-item: center;
+		flex-wrap: wrap;
+		flex-direction: row;
+		gap: 5px;
+		width: 100%;
+		height: 100%;
+		transition-property: all;
+		transition-duration: 0.3s;
+	
+	}
+	.bar{
+		background-color: #000;
+		height: 100%;
+		width: 100%;
+		position: absolute;
+		z-index: 10000;
+		top: 0px;
+		left: 0px;
+		visibility: hidden;
+		
+	}
+	.potos{
+		display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    font-family: sans-serif;
+    width: 95vw;
+	margin-top: 50px;
+    flex-wrap: wrap;
+    position:static;
+    top: 130px;
+		overflow: auto;
+
+
+		
+	}
+	
+	
+
+	.imgCard{
+	
+	
+		display: flex;
+		flex-direction: column;
+	
+	}
+	.imgCard a{
+		margin-top: 0px;
+		z-index: 1;
+		background-color: #0000;
+		position: inherit;
+		color: #0000;
+	}
+	
+
+.topBar{
+	height: 50px;
+	width: 100vw;
+	position: fixed;
+	background-color: #0009;
+	top: 0;
+	left: 0;
+	color: white;
+	font-family: sans-serif;
+	display: flex;
+	flex-direction: row;
+	column-gap: 50px;
+	align-items: center;
+	justify-content: flex-end;
+	box-shadow: 0px 3px 5px black;
+	z-index: 100;
+	
+}
+	ul{
+		margin-right: 50px;
+	}
+	li{
+		display: inline;
+		margin: 20px;
+	}
+	.topBar img{
+		position: absolute;
+		left: 20px;
+	
+	}
+	.topBar input[type="search"]{
+		box-shadow: 0px 3px 5px inset;
+		border-style: none;
+		height: 30px;
+	}
+	.topBar input[type="search"]:focus{
+		outline: none;
+	}
+	.searcher input[type="button"]{
+		height: 30px;
+		width: 30px;
+		font-weight: bold;
+		background-color: #0000;
+		color: white;
+		box-shadow: 0px 3px 5px black;
+		border: none;
+		background-position: center;
+		border-radius: 100%;
+		background-size: 25px;
+		background-repeat: no-repeat;
+		
+		
+	}
+	.upload{
+		height: 30px;
+		30px
+		font-weight: bold;
+		background-color: #0000;
+		color: white;
+		border: none;
+		padding: 15px;
+		border-radius: 5px;
+		background-image: url(photo.png);
+		background-position: center;
+		background-size: 40%;
+		background-repeat: no-repeat;
+		box-shadow: 0px 2px 5px black inset;
+		padding: 10px;
+	}
+	a{
+		text-decoration: none;
+	}
+	
+	@media only screen and (max-width: 600px){
+ 	.topBar  ul  {
+			display: block;
+	}
+		.topBar img{
+			display: none;
+		}
+		.searcher{
+			
+			justify-content: center;
+			align-items: center;
+			display: none;
+			
+		
+		}
+		.topBar  {
+			position: fixed;
+			bottom: 0px;
+			display: flex;
+			align-content: center;
+			align-items: center;
+		}
+		
+	}
+	
+::-webkit-scrollbar{width:0px; height: 0px; border-left:10px solid #6d7bff52;}
+::-webkit-scrollbar-thumb{background-color: #6d7bff52;}
+	
+	
+	progress{
+ 
+	background-color: red;
+    border-radius: 50px; 
+    background-size: 35px 20px, 100% 100%, 100% 100%;
+		height: 40px;
+		width: 100%;
+}
+	
+	.uploadImage{
+		position: absolute;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		padding: 10px;
+		flex-direction: column;
+		box-shadow: 0px 2px 5px black;
+		z-index: 100;
+		background-color: #0009;
+		top: 110;
+		right: 10;
+		grid-row-gap: 10px;
+		display: none;
+		transition-property: all;
+		transition-duration: 0.5s;
+		animation-name: resizedis;
+		animation-duration: 1s;
+		    background-size: 60%;
+	
+	}
+	
+	@keyframes resizedis{
+		0%{
+			height: 0px
+				
+		}
+		100%{
+			height: 474px;
+		}
+	}
+	
+	
+	.uploadImage .upload{
+		height: 300px;
+		width: 300px;
+		background-color: #0000;
+		animation-name: resizedis;
+		animation-duration: 1s;
+		
+	}
+	
+	.uploadImage .upldr{
+		background-color: deeppink;
+		width: 100%;
+		border-style: none;
+		color: white;
+		padding: 10px;
+		box-shadow: 0px 2px 5px black;
+	}
+	.uploadImage input[type="text"]{
+		width: 100%;
+		height: 50px;
+		font-weight: bold;
+		text-align: center;
+		color: darkslategray;
+	}
+	.uploadImage input[type="text"]::placeholder{
+		text-align: center;
+		
+	}
+	.uploadImage input[type="text"]:focus{
+		outline: none;
+		
+	}
+	
+	.openupldr{
+		    margin-right: 10px;
+    background-image: url(upload.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: 90%;
+    text-align: left;
+	}
+	
+	.openupldr:hover{
+		box-shadow: 0px 2px 5px black;
+		cursor: pointer;
+	}
+	
+	.userProfile{
+		background-image: url(profile-user.png);
+		
+		box-shadow: 0px 2px 5px black;
+		background-position: 90%;
+		background-size: 22px;
+		background-repeat: no-repeat;
+		height: 30px;
+		width: 30px;
+		background-color: #0000;
+		text-align: left;
+		
+		
+	}
+	
+	.searcher{
+			display: flex;
+		flex-direction: row;
+		width: 30vw;
+		column-gap: 20px;
+	}
+	.bar{
+		position: absolute;
+		top: 100px;
+		overflow: auto;
+		background-color: black;
+		
+	}
+	
+</style>
+<body class="home" >
+<div class="topBar">
+<img src="logo_logo.png" height="80%">
+<div class="searcher">
+
+	
+	
+	
+	<div class="uploadImage" id="imgupldr">
+	
+	
+<input id="upload" type="button" class="upload">
+	<input type="text" id="artName" placeholder="Image description">
+<br>
+<input type="button" onclick="pushit()" value="Upload" class="upldr">
+<progress id="prog" value="0" max="100"> upload progress </progress>
+	
+	
+</div>
+</div>
+
+
+
+
+	<div class="bar" id="bar"></div>
+
+
+
+<!--firebase stuff-->
+<script src="https://gstatic.com/firebasejs/8.9.1/firebase-app.js"></script>
+<script src="https://gstatic.com/firebasejs/8.9.1/firebase-auth.js"></script>
+<script src="https://gstatic.com/firebasejs/8.9.1/firebase-storage.js"></script>
+<script src="https://gstatic.com/firebasejs/8.9.1/firebase-database.js"></script>
+<script src="config.js"></script>
+
+<!--my script-->
+
+<script src="userIndex.js"></script>
+<script src="upload.js"></script>
